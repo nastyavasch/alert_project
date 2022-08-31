@@ -1,1 +1,1 @@
-# alert_project
+Программа запускается командой docker-compose up --build.
