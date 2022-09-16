@@ -1,26 +1,23 @@
-FROM python:3.7
+FROM python:3.10
 
 
 
-
-WORKDIR /home/anastasiya/Documents/GitHub/alert_project
-
+WORKDIR /alert_project
 
 
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
-COPY requirements.txt ./
+ENV PATH /root/.local/bin:$PATH
+
+COPY pyproject.toml poetry.lock ./
 
 COPY ./data .
 
 
+RUN poetry config virtualenvs.create false \
+  && poetry install --no-interaction --no-ansi
 
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-
-
-
-COPY . /home/anastasiya/Documents/GitHub/alert_project
+COPY . /alert_project
 
 
 
