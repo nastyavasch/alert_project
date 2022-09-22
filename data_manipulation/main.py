@@ -16,5 +16,9 @@ def error_logs(df, freq, col= 'severity'):
 # freq - time frequency
 # col - columns we want to add to group by. default = 'severity' column
 
-lg.error(error_logs(df,'1Min')) #condition 1
-lg.error(error_logs(df,'60Min', 'bundle_id')) #condition 2
+#lg.error(error_logs(df,'1Min')) #condition 1
+#lg.error(error_logs(df,'60Min', 'bundle_id')) #condition 2
+
+err_m =df['error_message'].unique()
+bb = df['bundle_id'].unique()
+print(df['bundle_id'].unique())

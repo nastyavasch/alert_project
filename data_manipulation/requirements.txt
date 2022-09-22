@@ -190,3 +190,4 @@ xdg==5.1.1
 xkit==0.0.0
 zipp==3.8.1
 logger
+hypothesis
