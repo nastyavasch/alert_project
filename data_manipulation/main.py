@@ -11,7 +11,7 @@ df_errors = df[df.severity == 'Error']
 
 #condition 1
 @click.command('start')
-@click.argument('col')
+@click.argument('col', nargs = 1)
 def error_logs(df, freq, col = 'severity'):
     df_errors = df[df.severity == 'Error']
     df['date'] = pd.to_datetime(df['date'], errors = 'coerce', unit = 's')
