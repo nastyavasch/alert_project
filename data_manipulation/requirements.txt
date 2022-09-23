@@ -189,5 +189,5 @@ widgetsnbextension==3.6.1
 xdg==5.1.1
 xkit==0.0.0
 zipp==3.8.1
-logger
+logging
 hypothesis
