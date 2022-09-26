@@ -11,6 +11,8 @@ df_errors = df[df.severity == 'Error']
 
 #condition 1
 @click.command('start')
+@click.argument('df', nargs = 1)
+@click.argument('freq', nargs = 1)
 @click.argument('col', nargs = 1)
 def error_logs(df, freq, col = 'severity'):
     df_errors = df[df.severity == 'Error']
@@ -21,5 +23,5 @@ def error_logs(df, freq, col = 'severity'):
 # freq - time frequency
 # col - columns we want to add to group by. default = 'severity' column
 
-lg.error(error_logs(df,'1Min')) #condition 1
-lg.error(error_logs(df,'60Min', 'bundle_id')) #condition 2
+#lg.error(error_logs(df,'1Min')) #condition 1
+#lg.error(error_logs(df,'60Min', 'bundle_id')) #condition 2
