@@ -1,3 +1,3 @@
 
 
-poetry run main.py start 'bundle_id'
+poetry run main.py start bundle_id
