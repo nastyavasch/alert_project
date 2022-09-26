@@ -11,7 +11,6 @@ df_errors = df[df.severity == 'Error']
 
 #condition 1
 @click.command('start')
-@click.argument('df', nargs = 1)
 @click.argument('freq', nargs = 1)
 @click.argument('col', nargs = 1)
 def error_logs(df, freq, col = 'severity'):

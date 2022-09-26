@@ -1,4 +1,4 @@
-df = df
+#!/bin/bash
 freq = 60Min
 col = bundle_id
 
