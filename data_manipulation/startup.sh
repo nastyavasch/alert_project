@@ -1,5 +1,5 @@
 #!/bin/bash
-freq = 60Min
-col = bundle_id
+declare freq=60Min
+declare col=bundle_id
 
-poetry run main.py start $freq $col
+poetry run python main.py start $freq $col
