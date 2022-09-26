@@ -22,4 +22,4 @@ COPY . /alert_project
 
 
 
-CMD [ "python", "./main.py", "./startup.sh" ]
+CMD [ "/bin/bash", "./startup.sh"]
