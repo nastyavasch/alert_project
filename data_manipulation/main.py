@@ -19,7 +19,7 @@ def error_logs(df, freq, col = 'severity'):
     df['date'] = pd.to_datetime(df['date'], errors = 'coerce', unit = 's')
     error_num = df_errors.groupby([pd.Grouper(key='date', freq=freq, dropna=True)] + [col])['severity'].count()
     result = error_num[error_num > 10]
-    return result
+    return lg.error(result)
 # freq - time frequency
 # col - columns we want to add to group by. default = 'severity' column
 
