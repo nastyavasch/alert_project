@@ -19,7 +19,4 @@ RUN poetry config virtualenvs.create false \
 
 COPY . /alert_project
 
-
-
-
-CMD [ "/bin/bash", "./startup.sh"]
+CMD [ "python3", "./main.py"]
